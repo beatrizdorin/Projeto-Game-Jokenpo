@@ -12,4 +12,6 @@ Emojis: Emojis animados para representar suas escolhas e as do computador.
 Feedback claro: O jogo fornece informações sobre o resultado da partida, como "GANHOU", "PERDEU" ou "EMPATE".
 
 
+
+
 Agradeço a todos que jogarem e adoraria ouvir seu feedback! 🙌
