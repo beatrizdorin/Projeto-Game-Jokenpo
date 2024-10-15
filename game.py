@@ -2,8 +2,15 @@ import random
 import emoji
 import pygame
 from time import sleep
+import os
 
 pygame.init()
+
+def limpar_tela():
+    if os.name == "nt":
+        os.system('cls')
+    else:
+        os.system('clear')
 
 def jogar():
     pygame.mixer.music.load('mario_ex045.mp3')
@@ -17,7 +24,7 @@ def jogar():
 
     sleep(1)
 
-    escolha = str(input('ESCOLHA: PEDRA / PAPEL / TESOURA: ')).lower()
+    escolha = str(input('ESCOLHA: PEDRA / PAPEL / TESOURA: ')).upper()
 
     print('')
     print('        JO')
@@ -43,25 +50,27 @@ def jogar():
 
     if escolha == pc_escolha:
        print('\033[33mEMPATE\033[m')
-    elif escolha == 'pedra' and pc_escolha == 'PAPEL':
+    elif escolha == 'PEDRA' and pc_escolha == 'PAPEL':
        print('\033[31mPERDEU\033[m')
-    elif escolha == 'papel' and pc_escolha == 'PEDRA':
+    elif escolha == 'PAPEL' and pc_escolha == 'PEDRA':
       print ('\033[32mGANHOU\033[m')
 
-    elif escolha == 'papel' and pc_escolha == 'TESOURA':
+    elif escolha == 'PAPEL' and pc_escolha == 'TESOURA':
       print ('\033[31mPERDEU\033[m')
-    elif escolha == 'tesoura' and pc_escolha == 'PAPEL':
+    elif escolha == 'TESOURA' and pc_escolha == 'PAPEL':
      print ('\033[32mGANHOU\033[m')
 
-    elif escolha == 'pedra' and pc_escolha == 'TESOURA':
+    elif escolha == 'PEDRA' and pc_escolha == 'TESOURA':
       print ('\033[32mGANHOU\033[m')
-    elif escolha == 'tesoura' and pc_escolha == 'PEDRA':
+    elif escolha == 'TESOURA' and pc_escolha == 'PEDRA':
       print('\033[31mPERDEU\033[m')
 
 while True:
     jogar()
     resposta = input('   Deseja jogar novamente? (s/n): ').lower()
-    if resposta == 'n':
+    if resposta == 's':
+        limpar_tela()
+    elif resposta == 'n':
         print('   Obrigado por jogar!')
         break
 
