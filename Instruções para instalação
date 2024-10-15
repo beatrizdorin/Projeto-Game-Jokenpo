@@ -1,0 +1,16 @@
+# Jokenpô
+
+## Sobre o Jogo
+Este é um jogo de Jokenpô onde você pode jogar contra o computador. O objetivo é escolher entre Pedra, Papel ou Tesoura e ver quem vence!
+
+## Como Jogar
+
+### Requisitos
+- Python 3.x
+- Biblioteca Pygame
+- Biblioteca Emoji
+
+### Instalação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/beatrizdorin/Projeto-Game-Jokenpo.git
