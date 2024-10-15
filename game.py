@@ -1,8 +1,9 @@
+import os
 import random
+from time import sleep
+
 import emoji
 import pygame
-from time import sleep
-import os
 
 pygame.init()
 
